@@ -6,14 +6,14 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 <!-- Font inclusion -->
 	<link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/font-awesome.min.css" />
 
 <!-- Script inclusion -->
-	<script type="text/javascript" src="js/lib/jquery-2.2.3.min.js"></script>
-	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/lib/MultiScreen.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/font-awesome.min.css" />
 </head>
 
 <body>
@@ -31,9 +31,9 @@
 		<a class="navbar-brand main-title" href="#">HELP - Y</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#">Profile</a></li>
+		<ul id="menu" class="nav navbar-nav">
+			<li><a href="#screen0">Home</a></li>
+			<li><a href="#screen1">Profile</a></li>
 			<li><a href="#"></a></li>
 		</ul>
 		</div><!--/.nav-collapse -->
@@ -41,9 +41,10 @@
 </nav>
 <!-- !Header -->
 
+<div id="fullpage">
 <!-- Question Page -->
 <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
-<div id="screen0" class="ms-container ms-default">
+<div class="section active" data-anchor="slide0">
 	<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-6 col-sm-6 col-xs-12">
@@ -86,7 +87,7 @@
 <!-- Question Page -->
 
 <!-- Profile Page -->
-<div id="screen1" class="ms-container">
+<div class="section" data-anchor="slide1">
 <br>
 <div class="container">
   <div class="row">
@@ -112,12 +113,16 @@
                   <span class="text-muted">Email:</span> email@test.com<br>
                   <span class="text-muted">Birth date:</span> 01.01.2001<br>
                   <span class="text-muted">Gender:</span> male<br><br>
+                  <span class="text-muted">Skills:</span>
+                  <span class="label label-default">Excel</span>
+                  <span class="label label-primary">Word</span>
+                  <span class="label label-success">Speech</span>
+                  <span class="label label-info">SQL</span>
+                  <span class="label label-warning">BrainFuck</span>
+                  <span class="label label-danger">Danger</span><br><br>
                   <small class="text-muted">Created: 01.01.2015</small>
                 </div>
                 <div class="col-md-6">
-                  <div class="activity-mini">
-                    <i class="glyphicon glyphicon-comment text-muted"></i> 500
-                  </div>
                   <div class="activity-mini">
                     <i class="glyphicon glyphicon-thumbs-up text-muted"></i> 1500
                   </div>
@@ -136,9 +141,23 @@
   </div>
 </div>
 </div>
+</div>
 <!-- !Profile Page -->
 
 <!-- Script inclusion -->
 	<script type="text/javascript" src="js/gettags.js"></script>
+	<script type="text/javascript" src="js/lib/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.fullPage.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#1bbc9b', '#4BBFC3'],
+				anchors: ['screen0', 'screen1'],
+				menu: '#menu',
+				scrollingSpeed: 1000
+			});
+		});
+	</script>
 </body>
 </html>
