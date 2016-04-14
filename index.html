@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <!-- CSS inclusion -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+<!-- Font inclusion -->
+<link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+
 </head>
+
 <body>
+
 <!-- Header -->
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
@@ -16,33 +24,117 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="#">Project name</a>
+		<a class="navbar-brand main-title" href="#">HELP - Y</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 		<ul class="nav navbar-nav">
 			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Contact</a></li>
-			<li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-			<ul class="dropdown-menu">
-				<li><a href="#">Action</a></li>
-				<li><a href="#">Another action</a></li>
-				<li><a href="#">Something else here</a></li>
-				<li role="separator" class="divider"></li>
-				<li class="dropdown-header">Nav header</li>
-				<li><a href="#">Separated link</a></li>
-				<li><a href="#">One more separated link</a></li>
-			</ul>
-			</li>
+			<li><a href="#">Profile</a></li>
+			<li><a href="#"></a></li>
 		</ul>
 		</div><!--/.nav-collapse -->
 	</div><!--/.container-fluid -->
 </nav>
+<!-- !Header -->
 
+<!-- Question Page -->
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div id="screen0" class="ms-container ms-default">
+	<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-6 col-sm-6 col-xs-12">
+			<form method="post">
+				<div class="form-group ">
+				<div class="input-group">
+					<div class="input-group-addon">
+				<i class="fa fa-bookmark">
+				</i>
+					</div>
+					<input class="form-control" id="subject" name="subject" placeholder="Title" type="text"/>
+				</div>
+				</div>
+				<div class="form-group ">
+				<textarea class="form-control" cols="40" id="message" name="message" placeholder="Type your question here" rows="10"></textarea>
+				</div>
+				<!-- Bottom icons -->
+				<div class="icon-line">
+					<i class="fa fa-microphone" aria-hidden="true"></i>
+					<i class="fa fa-paperclip" aria-hidden="true"></i>
+					<i class="fa fa-camera" aria-hidden="true"></i>
+				</div>
+				<!-- Deadline -->
+				<div class="deadline">
+				</div>
+				<div class="form-group">
+				<div>
+					<button class="btn btn-primary " name="submit" type="submit">
+						Ask
+					</button>
+				</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	</div>
+</div>
+<!-- Question Page -->
+
+<!-- Profile Page -->
+<div id="screen1" class="ms-container">
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-12 lead">User profile<hr></div>
+          </div>
+          <div class="row">
+			<div class="col-md-4 text-center">
+              <img class="img-circle avatar avatar-original" style="-webkit-user-select:none;
+              display:block; margin:auto;" src="http://robohash.org/sitsequiquia.png?size=120x120">
+            </div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1 class="only-bottom-margin">User Name</h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <span class="text-muted">Email:</span> email@test.com<br>
+                  <span class="text-muted">Birth date:</span> 01.01.2001<br>
+                  <span class="text-muted">Gender:</span> male<br><br>
+                  <small class="text-muted">Created: 01.01.2015</small>
+                </div>
+                <div class="col-md-6">
+                  <div class="activity-mini">
+                    <i class="glyphicon glyphicon-comment text-muted"></i> 500
+                  </div>
+                  <div class="activity-mini">
+                    <i class="glyphicon glyphicon-thumbs-up text-muted"></i> 1500
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <hr><button class="btn btn-default pull-right"><i class="glyphicon glyphicon-pencil"></i> Edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- !Profile Page -->
 <!-- Script inclusion -->
 	<script type="text/javascript" src="js/lib/jquery-2.2.3.min.js"></script>
 	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/lib/MultiScreen.js"></script>
+
 </body>
 </html>
