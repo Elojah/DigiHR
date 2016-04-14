@@ -26,6 +26,12 @@
 	margin-bottom: 0px;
 }
 
+.ellips-text {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
 /*Profile*/
 body {
   background-color: #eaeaea;
