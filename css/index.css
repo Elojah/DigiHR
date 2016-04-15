@@ -66,26 +66,10 @@ img.avatar {
 
 /* ANIMATION
 */
-
-background: linear-gradient(238deg, #26e6b5, #3326e6, #d49b64, #6954bb);
-background-size: 800% 800%;
-
--webkit-animation: AnimationName 25s ease infinite;
--moz-animation: AnimationName 25s ease infinite;
-animation: AnimationName 25s ease infinite;
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 51%}
-    100%{background-position:0% 50%}
+.badge-notify {
+   background:red;
+   position:relative;
+   top: -20px;
+   left: -15px;
 }
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 51%}
-    100%{background-position:0% 50%}
-}
-@keyframes AnimationName { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 51%}
-    100%{background-position:0% 50%}
-}
+
