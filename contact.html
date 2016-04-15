@@ -75,12 +75,17 @@
 			<a href="" class="btn btn-info ">
 				<span class="fa fa-commenting-o fa-4x"></span>
 			</a>
-			<a href="" class="btn btn-success ">
+			<a onclick="successNotif();" class="btn btn-success ">
 				<span class="fa fa-check fa-4x"></span>
 			</a>
-			<a href="" class="btn btn-danger">
+			<a onclick="confirmDecline();" class="btn btn-danger">
 				<span class=" fa fa-close fa-4x"></span>
 			</a>
+		</div>
+		<div class="row text-center" id="final-notif" style="display:none">
+			<div class="alert alert-success">
+				<strong>Success</strong> Thanks for this positive action !
+			</div>
 		</div>
 	</div>
 
@@ -88,5 +93,28 @@
 	<script type="text/javascript" src="js/lib/jquery-2.2.3.min.js"></script>
 	<script type="text/javascript" src="js/gettags.js"></script>
 	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/lib/bootbox.min.js"></script>
+	<script type="text/javascript">
+	function	successNotif() {
+		$('#final-notif').css('display', 'block');
+	}
+	</script>
+	<script type="text/javascript">
+		function	confirmDecline() {
+			bootbox.dialog({
+			  message: "Do you really want to decline this request ?",
+			  buttons: {
+			    success: {
+			      label: "Yes i can't answer it",
+			      className: "btn-success"
+			    },
+			    danger: {
+			      label: "No, let me see more",
+			      className: "btn-danger"
+			    }
+			  }
+			});
+		}
+	</script>
 </body>
 </html>
