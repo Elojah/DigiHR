@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- CSS inclusion -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+		<!-- Font inclusion -->
+		<link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+
+		<!-- Script inclusion -->
+		<link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/cd.css"/>
+	</head>
+
+	<body>
+
+		<!-- Header -->
+		<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a id="title-brand" class="navbar-brand main-title" href="#"><span style="color:#f55b6f">H</span><span style="color:#cfa100">E</span><span style="color:#3bb7e6">L</span><span style="color:#abbd2c">P</span> - Y<img class="pull-left logo-helpy" src="img/logo.png"></a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul id="menu" class="nav navbar-nav">
+					<li><a href="#screen0">Home</a></li>
+					<li><a href="#screen1">Profile</a></li>
+					<li><a href="#screen2">Loading</a></li>
+					<li><a href="#screen3">Notification</a></li>
+					<li><a href="#screen4">Feedback</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div><!--/.container-fluid -->
+		</nav>
+		<!-- !Header -->
+
+		<div class="container text-center">
+			<div class="jumbotron" style="padding:5px;">
+				<div class="row">
+				<div class="col-xs-3">
+					<img src="img/logo.png" class="img-responsive">
+				</div>
+				<div class="col-xs-9">
+				<h1>I need help !</h1>
+				</div>
+				</div>
+			</div>
+			<div class="row">
+						<div class="form-group ">
+							<div class="input-group">
+								<div class="input-group-addon">
+									<i class="fa fa-bookmark"></i>
+								</div>
+								<input class="form-control" id="subject" name="subject" placeholder="Title of my request" type="text"/>
+							</div>
+						</div>
+						<div class="form-group text-left">
+							<label for="details"><h4><b>Details of my request and keywords</b></h4></label>
+							<textarea id="details" class="form-control" cols="40" id="message" name="message" placeholder="Type your question here" rows="10"></textarea>
+						</div>
+						<!-- Bottom icons -->
+						<div id="tags">
+						</div>
+						<div class="icon-line">
+							<i class="fa fa-microphone fa-3x" aria-hidden="true"></i>
+							<i class="fa fa-paperclip fa-3x" aria-hidden="true"></i>
+							<i class="fa fa-camera fa-3x" aria-hidden="true"></i>
+						</div>
+						<!-- Deadline -->
+						<div class="deadline">
+						</div>
+						<div class="form-group">
+							<div class="col-xs-6 col-xs-offset-3">
+								<button class="btn btn-primary btn-block" name="submit" type="submit">
+									<h2 style="color:white" >Send my request<span class="pull-right fa fa-send-o"></span></h2>
+								</button>
+							</div>
+						</div>
+			</div>
+		</div>
+	</div>
+	<!-- Question Page -->
+
+	<!-- Script inclusion -->
+	<script type="text/javascript" src="js/lib/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="js/gettags.js"></script>
+	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.fullPage.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+				$('#fullpage').fullpage({
+sectionsColor: ['#1bbc9b', '#1bbc9b', '#1bbc9b', '#1bbc9b', '#1bbc9b'],
+anchors: ['screen0', 'screen1', 'screen2', 'screen3', 'screen4'],
+menu: '#menu',
+scrollingSpeed: 1000
+});
+				});
+</script>
+<script type="text/javascript">
+	function	valid_img(src, classimg) {
+		var images = $('.' + classimg).toArray();
+		$.each(images, function(i, img) {
+				if (src == img.id) {
+				img.src = "img/" + src + "-valid.png";
+				} else {
+				img.src = "img/" + img.id + ".png";
+				}
+				});
+	}
+</script>
+</body>
+</html>

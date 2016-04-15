@@ -29,7 +29,7 @@ var getTags = function (src, dst) {
   dst.html("");
   var nb = 0;
   for (var i = 0; i < words.length; i++) {
-  	if (Tag_Key.indexOf(title(words[i])) >= 0 && dst.html().indexOf(title(words[i])) < 0)
+  	if ((words[i].charAt(0) == '#' || Tag_Key.indexOf(title(words[i])) >= 0) && dst.html().indexOf(title(words[i])) < 0)
     	dst.append(newTag(title(words[i]), nb++));
   }
 };

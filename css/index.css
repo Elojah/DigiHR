@@ -21,6 +21,10 @@
     color: red;
 }
 
+#title-brand  {
+	font-family: Roboto Slab;
+}
+
 .navbar {
 	z-index: 10;
 	margin-bottom: 0px;
@@ -58,4 +62,30 @@ img.avatar {
 
 .logo-helpy {
 	width: 30px;;
+}
+
+/* ANIMATION
+*/
+
+background: linear-gradient(238deg, #26e6b5, #3326e6, #d49b64, #6954bb);
+background-size: 800% 800%;
+
+-webkit-animation: AnimationName 25s ease infinite;
+-moz-animation: AnimationName 25s ease infinite;
+animation: AnimationName 25s ease infinite;
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
 }

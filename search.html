@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- CSS inclusion -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+		<!-- Font inclusion -->
+		<link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+
+		<!-- Script inclusion -->
+		<link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/cd.css" />
+	</head>
+
+	<body>
+
+		<!-- Header -->
+		<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand main-title" href="#">HELP - Y<img class="pull-left logo-helpy" src="img/logo.png"></a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul id="menu" class="nav navbar-nav">
+					<li><a href="#screen0">Home</a></li>
+					<li><a href="#screen1">Profile</a></li>
+					<li><a href="#screen2">Loading</a></li>
+					<li><a href="#screen3">Notification</a></li>
+					<li><a href="#screen4">Feedback</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div><!--/.container-fluid -->
+		</nav>
+		<!-- !Header -->
+
+
+
+		<div class="container-fluid">
+			<div class="row jumbotron">
+				Reauest sended.
+			</div>
+				<div class="col-md-12">
+					<div class="page-header">
+						<h1>
+							Who can help you ? <small>waiting for someone available...</small>
+						</h1>
+					</div>
+					<div class="row">
+						<div class="col-xs-4 col-xs-offset-1 col-md-3 col-md-offset-3  -center">
+							<img class="img-responsive" alt="Bootstrap Thumbnail First" src="img/near.png"/>
+							<h3>2 people around you</h3>
+						</div>
+						<div class="col-xs-4 col-xs-offset-2 col-md-3 text-center">
+							<img class="img-responsive" alt="Bootstrap Thumbnail Second" src="img/around.png"/>
+							<h3>76 people around the world</h3>
+						</div>
+					</div>
+					<div class="list-group">
+						<a href="#" class="list-group-item list-group-item-primary" style="background-color:#00babc;color:white;text-weight:bold;font-size:2em;">Similar requests</a>
+						<div class="list-group-item">
+							<h4 class="list-group-item-heading">
+								How to do a table in excel ?
+							</h4>
+							<p class="list-group-item-text ellips-text">
+							Lorem ipsum Irure labore aliqua in sed pariatur velit et qui eu aliquip culpa exercitation enim sint et eu Duis incididunt adipisicing laboris esse sit tempor aute in consequat dolor ut esse voluptate aliqua velit.
+							</p>
+						</div>
+						<div class="list-group-item">
+							<h4 class="list-group-item-heading">
+								How optimize a trie in Malbolge ?
+							</h4>
+							<p class="list-group-item-text ellips-text">
+							Lorem ipsum Commodo magna Duis eu laboris non sed sint fugiat occaecat veniam commodo.
+							</p>
+						</div>
+						<div class="list-group-item">
+							<h4 class="list-group-item-heading">
+								I'm so scared about CSS, where to start ?
+							</h4>
+							<p class="list-group-item-text ellips-text">
+							Lorem ipsum Qui ut reprehenderit dolor et consequat esse veniam exercitation qui irure aliquip est laboris cillum incididunt laboris velit eiusmod.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Script inclusion -->
+	<script type="text/javascript" src="js/lib/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="js/gettags.js"></script>
+	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.fullPage.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+				$('#fullpage').fullpage({
+sectionsColor: ['#1bbc9b', '#1bbc9b', '#1bbc9b', '#1bbc9b', '#1bbc9b'],
+anchors: ['screen0', 'screen1', 'screen2', 'screen3', 'screen4'],
+menu: '#menu',
+scrollingSpeed: 1000
+});
+				});
+</script>
+<script type="text/javascript">
+	function	valid_img(src, classimg) {
+		var images = $('.' + classimg).toArray();
+		$.each(images, function(i, img) {
+				if (src == img.id) {
+				img.src = "img/" + src + "-valid.png";
+				} else {
+				img.src = "img/" + img.id + ".png";
+				}
+				});
+	}
+</script>
+</body>
+</html>
