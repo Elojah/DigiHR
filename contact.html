@@ -36,49 +36,49 @@
 </nav>
 <!-- !Header -->
 
-	<div class="container-fluid">
-			<div class="" >
-				<a href="" class="btn btn-block btn-success btn-block" style="background-color:#00babc;text-weight:bold;"><h3 style=";color:white;"><i class="pull-left fa fa-user" aria-hidden="true"></i>Margaret Tatcher</h3></a>
-			</div>
-
-		<div class="jumbotron">
-			<h3>Title: Excel graph option</h3>
-			<p>
-			How to change color of graph?
-			</p>
+<div class="container-fluid">
+		<div class="" >
+			<a href="" class="btn btn-block btn-success btn-block" style="background-color:#00babc;text-weight:bold;"><h3 style=";color:white;"><i class="pull-left fa fa-user" aria-hidden="true"></i>Margaret Tatcher</h3></a>
 		</div>
 
-			<img class="img-responsive img-thumbnail" src="img/annImg2.png"/>
-			<span class="fa fa-folder-open-o fa-2x" style="padding-left: 20px;"></span>
-			<span class="fa fa-microphone fa-2x" style="padding-left: 20px;"></span>
+	<div class="jumbotron">
+		<h3>Title: Excel graph option</h3>
+		<p>
+		How to change color of graph?
+		</p>
+	</div>
 
-			<div class="form-group">
-				<textarea placeholder="Quick answer." class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
-			</div>
-		</div>
-		<div class="row text-center">
-			<a href="" class="btn btn-info ">
-				<span class="fa fa-phone fa-4x"></span>
-			</a>
-			<a href="" class="btn btn-info ">
-				<span class="fa fa-envelope fa-4x"></span>
-			</a>
-			<a href="" class="btn btn-info ">
-				<span class="fa fa-commenting-o fa-4x"></span>
-			</a>
-			<a onclick="successNotif();" class="btn btn-success ">
-				<span class="fa fa-check fa-4x"></span>
-			</a>
-			<a onclick="confirmDecline();" class="btn btn-danger">
-				<span class=" fa fa-close fa-4x"></span>
-			</a>
-		</div>
-		<div class="row text-center" id="final-notif" style="display:none">
-			<div class="alert alert-success">
-				<strong>Success</strong> Thanks for this positive action !
-			</div>
+		<img class="img-responsive img-thumbnail" src="img/annImg2.png"/>
+		<span class="fa fa-folder-open-o fa-2x" style="padding-left: 20px;"></span>
+		<span class="fa fa-microphone fa-2x" style="padding-left: 20px;"></span>
+
+		<div class="form-group">
+			<textarea placeholder="Quick answer." class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
 		</div>
 	</div>
+	<div class="row text-center">
+		<a id="call-me-maybe" href="#" class="btn btn-info" data-toggle="popover" title="Call" data-content="06.30.56.15.21" onclick="$('#call-me-maybe').popover();" >
+			<span class="fa fa-phone fa-4x"></span>
+		</a>
+		<a href="" class="btn btn-info ">
+			<span class="fa fa-envelope fa-4x"></span>
+		</a>
+		<a href="" class="btn btn-info ">
+			<span class="fa fa-commenting-o fa-4x"></span>
+		</a>
+		<a onclick="successNotif();" class="btn btn-success ">
+			<span class="fa fa-check fa-4x"></span>
+		</a>
+		<a onclick="confirmDecline();" class="btn btn-danger">
+			<span class=" fa fa-close fa-4x"></span>
+		</a>
+	</div>
+	<div class="row text-center" id="final-notif" style="display:none">
+		<div class="alert alert-success">
+			<strong>Success</strong> Thanks for this positive action !
+		</div>
+	</div>
+</div>
 
 	<!-- Script inclusion -->
 	<script type="text/javascript" src="js/lib/jquery-2.2.3.min.js"></script>
@@ -91,6 +91,7 @@
 	}
 	</script>
 	<script type="text/javascript">
+		$('#call-me-maybe').popover();
 		function	confirmDecline() {
 			bootbox.dialog({
 			  message: "Do you really want to decline this request ?",
