@@ -8,6 +8,10 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 <!-- Font inclusion -->
+	<link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+
+<!-- Script inclusion -->
 <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/font-awesome.min.css" />
 </head>
@@ -57,9 +61,11 @@
 				</div>
 				</div>
 				<div class="form-group ">
-				<textarea class="form-control" cols="40" id="message" name="message" placeholder="Type your question here" rows="10"></textarea>
+				<textarea id="details" class="form-control" cols="40" id="message" name="message" placeholder="Type your question here" rows="10"></textarea>
 				</div>
 				<!-- Bottom icons -->
+				<div id="tags">
+				</div>
 				<div class="icon-line">
 					<i class="fa fa-microphone" aria-hidden="true"></i>
 					<i class="fa fa-paperclip" aria-hidden="true"></i>
@@ -360,6 +366,7 @@
 
 </div>
 <!-- Script inclusion -->
+	<script type="text/javascript" src="js/gettags.js"></script>
 	<script type="text/javascript" src="js/lib/jquery-2.2.3.min.js"></script>
 	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/lib/jquery.fullPage.min.js"></script>
