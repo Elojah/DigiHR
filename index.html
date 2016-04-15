@@ -84,10 +84,10 @@
 							</img>
 						</div>
 						<div class="col-xs-2">
-							<div class="icon-line" style="padding:20px;">
-								<i class="fa fa-3x fa-pencil" aria-hidden="true"></i>
-								<i class="fa fa-3x fa-text-height" aria-hidden="true"></i>
-								<i class="fa fa-3x fa-comments" aria-hidden="true"></i>
+							<div style="padding:30px;">
+								<p class="fa fa-3x fa-pencil" aria-hidden="true" onclick="showNextImg();"></p>
+								<p class="fa fa-3x fa-text-height" aria-hidden="true"></p>
+								<p class="fa fa-3x fa-comments" aria-hidden="true"></p>
 							</div>
 						</div>
 						</div>
@@ -165,14 +165,17 @@
 		}
 	</script>
 	<script type="text/javascript">
-		function	showImg() {
-			if ($('#annImg-container').css('display') == 'none') {
-				$('#annImg-container').css('display', 'block');
-				$('#annImg').attr('src', 'img/annImg.png');
-			} else {
-				$('#annImg-container').css('display', 'none');
-			}
+	function	showImg() {
+		if ($('#annImg-container').css('display') == 'none') {
+			$('#annImg-container').css('display', 'block');
+			$('#annImg').attr('src', 'img/annImg.png');
+		} else {
+			$('#annImg-container').css('display', 'none');
 		}
+	}
+	function	showNextImg() {
+		$('#annImg').attr('src', 'img/annImg2.png');
+	}
 	</script>
 </body>
 </html>
