@@ -38,11 +38,9 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul id="menu" class="nav navbar-nav">
-					<li><a href="#screen0">Home</a></li>
-					<li><a href="#screen1">Profile</a></li>
-					<li><a href="#screen2">Loading</a></li>
-					<li><a href="#screen3">Notification</a></li>
-					<li><a href="#screen4">Feedback</a></li>
+					<li><a onclick="window.location.href='index.html'">Home</a></li>
+					<li><a onclick="window.location.href='user.html'">Profile</a></li>
+					<li><a onclick="window.location.href='notifications.html'">Notification</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div><!--/.container-fluid -->
@@ -78,7 +76,20 @@
 						<div class="icon-line" style="padding:20px;">
 							<i class="fa fa-microphone fa-3x" aria-hidden="true" style="padding:20px;"></i>
 							<i class="fa fa-paperclip fa-3x" aria-hidden="true" style="padding:20px;"></i><span class="badge badge-notify">1</span>
-							<i class="fa fa-camera fa-3x" aria-hidden="true" style="padding-left:20px;"></i><span class="badge badge-danger badge-notify">3</span>
+							<i class="fa fa-camera fa-3x" aria-hidden="true" style="padding-left:20px;" onclick="showImg();"></i><span class="badge badge-danger badge-notify">3</span>
+						</div>
+						<div id="annImg-container" style="display:none;">
+						<div class="col-xs-10">
+							<img id='annImg' class="img-responsive">
+							</img>
+						</div>
+						<div class="col-xs-2">
+							<div class="icon-line" style="padding:20px;">
+								<i class="fa fa-3x fa-pencil" aria-hidden="true"></i>
+								<i class="fa fa-3x fa-text-height" aria-hidden="true"></i>
+								<i class="fa fa-3x fa-comments" aria-hidden="true"></i>
+							</div>
+						</div>
 						</div>
 						<!-- Deadline -->
 						<div class="deadline">
@@ -120,7 +131,7 @@
     </div> -->
 						<div class="form-group">
 							<div class="">
-								<button class="btn btn-primary btn-block" name="submit" type="submit">
+								<button class="btn btn-primary btn-block" name="submit" type="submit" onclick="window.location.href='search.html'">
 									<h2 style="color:white" >Ask !<span class="pull-right fa fa-send-o"></span></h2>
 								</button>
 							</div>
@@ -155,8 +166,12 @@
 	</script>
 	<script type="text/javascript">
 		function	showImg() {
-			$('#annImg-container').css('display', 'block');
-			$('#annImg').attr('src', 'img/annImg.png');
+			if ($('#annImg-container').css('display') == 'none') {
+				$('#annImg-container').css('display', 'block');
+				$('#annImg').attr('src', 'img/annImg.png');
+			} else {
+				$('#annImg-container').css('display', 'none');
+			}
 		}
 	</script>
 </body>
