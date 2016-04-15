@@ -35,7 +35,8 @@
 			<li><a href="#screen0">Home</a></li>
 			<li><a href="#screen1">Profile</a></li>
 			<li><a href="#screen2">Loading</a></li>
-			<li><a href="#"></a></li>
+			<li><a href="#screen3">Notification</a></li>
+			<li><a href="#screen4">Feedback</a></li>
 		</ul>
 		</div><!--/.nav-collapse -->
 	</div><!--/.container-fluid -->
@@ -257,14 +258,113 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
 </div>
-<!-- !Notification Page -->
 </div>
+<!-- !Notification Page -->
 
+<!-- Feedback Page -->
+<div class="section" data-anchor="slide4">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1>
+					Feedback
+				</h1>
+			</div>
+			<a href="#" title="Shh" class="post-title">Lookin for HR Guru, plz HELP !</a>
+			<div class="list-group">
+				<div class="list-group-item clearfix">
+					<div class="row-fluid post-item" style="display: block;">
+					</div>
+				</div>
+				<div class="list-group-item">
+					<span class="post-title">Satisfaction: </a>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="thumbnail" onclick="valid_img('smile', 'validable-img');">
+											<img id="smile" class="validable-img" alt="Bootstrap Thumbnail First" src="img/smile.png" />
+											<div class="caption">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="thumbnail" onclick="valid_img('normal', 'validable-img');">
+											<img id="normal" class="validable-img" alt="Bootstrap Thumbnail Second" src="img/normal.png" />
+											<div class="caption">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="thumbnail" onclick="valid_img('straight', 'validable-img');">
+											<img id="straight" class="validable-img" alt="Bootstrap Thumbnail Third" src="img/straight.png" />
+											<div class="caption">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item">
+					<span class="post-title">On time: </a>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="thumbnail" onclick="valid_img('smile', 'validable-img2');">
+											<img id="smile" class="validable-img2" alt="Bootstrap Thumbnail First" src="img/smile.png" />
+											<div class="caption">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="thumbnail" onclick="valid_img('normal', 'validable-img2');">
+											<img id="normal" class="validable-img2" alt="Bootstrap Thumbnail Second" src="img/normal.png" />
+											<div class="caption">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="thumbnail" onclick="valid_img('straight', 'validable-img2');">
+											<img id="straight" class="validable-img2" alt="Bootstrap Thumbnail Third" src="img/straight.png" />
+											<div class="caption">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="list-group-item">
+					<span class="post-title">Comment: </a>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row">
+									<textarea></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- !Feedback Page -->
+
+</div>
 <!-- Script inclusion -->
 	<script type="text/javascript" src="js/gettags.js"></script>
 	<script type="text/javascript" src="js/lib/jquery-2.2.3.min.js"></script>
@@ -273,12 +373,24 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				sectionsColor: ['#1bbc9b', '#1bbc9b', '#1bbc9b', '#1bbc9b'],
-				anchors: ['screen0', 'screen1', 'screen2', 'screen3'],
+				sectionsColor: ['#1bbc9b', '#1bbc9b', '#1bbc9b', '#1bbc9b', '#1bbc9b'],
+				anchors: ['screen0', 'screen1', 'screen2', 'screen3', 'screen4'],
 				menu: '#menu',
 				scrollingSpeed: 1000
 			});
 		});
+	</script>
+	<script type="text/javascript">
+	function	valid_img(src, classimg) {
+		var images = $('.' + classimg).toArray();
+		$.each(images, function(i, img) {
+			if (src == img.id) {
+				img.src = "img/" + src + "-valid.png";
+			} else {
+				img.src = "img/" + img.id + ".png";
+			}
+		});
+	}
 	</script>
 </body>
 </html>
